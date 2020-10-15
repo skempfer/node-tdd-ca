@@ -19,12 +19,6 @@
       "jest"
     ]
   },
-  "lint-staged": {
-    "*.js": [
-      "standard --fix",
-      "git add"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/skempfer/node-tdd-ca.git"
