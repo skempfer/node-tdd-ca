@@ -1,0 +1,47 @@
+{
+  "name": "clean-node-api",
+  "version": "1.0.0",
+  "description": "Construindo uma API Rest em NodeJS utilizando TDD, Clean Architecture e Design Patterns.",
+  "author": "Ana Kempfer",
+  "license": "MIT",
+  "main": "src/main/index.js",
+  "scripts": {
+    "start": "node src/main/index.js",
+    "test": "jest --colors --noStackTrace --passWithNoTests --runInBand",
+    "test:unit": "npm test -- --watch -c jest-unit-config.js",
+    "test:integration": "npm test -- --watch -c jest-integration-config.js",
+    "test:staged": "npm test -- --findRelatedTests --silent",
+    "test:ci": "npm test -- --coverage --silent",
+    "test:coveralls": "npm run test:ci && coveralls < coverage/lcov.info"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skempfer/node-tdd-ca.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skempfer/node-tdd-ca/issues"
+  },
+  "homepage": "https://github.com/skempfer/node-tdd-ca#readme",
+  "devDependencies": {
+    "@shelf/jest-mongodb": "^1.2.3",
+    "coveralls": "^3.1.0",
+    "husky": "^4.3.0",
+    "jest": "^26.5.3",
+    "lint-staged": "^10.4.0",
+    "standard": "^14.3.4",
+    "supertest": "^5.0.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "express": "^4.17.1",
+    "fast-glob": "^3.2.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.2",
+    "validator": "^13.1.17"
+  }
+}
